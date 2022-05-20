@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace tanur\swagger;
 
 use yii\base\Action;
 
 /**
  * Class SwaggerUIRenderer renders the UI (HTML/JS/CSS).
  *
- * @package yii2mod\swagger
+ * @package tanur\swagger
  */
 class SwaggerUIRenderer extends Action
 {
@@ -19,7 +19,7 @@ class SwaggerUIRenderer extends Action
     /**
      * @var string base swagger template
      */
-    public $view = '@vendor/yii2mod/yii2-swagger/views/index';
+    public $view = '@vendor/tanur/yii2-swagger/views/index';
 
     /**
      * @var null|string|false the name of the layout to be applied to this controller's views.

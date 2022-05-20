@@ -1,6 +1,6 @@
 <?php
 
-use yii2mod\swagger\SwaggerAsset;
+use tanur\swagger\SwaggerAsset;
 
 /* @var $this \yii\web\View */
 /* @var $restUrl string */

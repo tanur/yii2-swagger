@@ -8,10 +8,10 @@
 
 Swagger/OpenAPI Documentation Generator for Yii2 Framework.
 
-[![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-swagger/v/stable)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![Total Downloads](https://poser.pugx.org/yii2mod/yii2-swagger/downloads)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![License](https://poser.pugx.org/yii2mod/yii2-swagger/license)](https://packagist.org/packages/yii2mod/yii2-swagger)
-[![Build Status](https://travis-ci.org/yii2mod/yii2-swagger.svg?branch=master)](https://travis-ci.org/yii2mod/yii2-swagger)
+[![Latest Stable Version](https://poser.pugx.org/tanur/yii2-swagger/v/stable)](https://packagist.org/packages/tanur/yii2-swagger)
+[![Total Downloads](https://poser.pugx.org/tanur/yii2-swagger/downloads)](https://packagist.org/packages/tanur/yii2-swagger)
+[![License](https://poser.pugx.org/tanur/yii2-swagger/license)](https://packagist.org/packages/tanur/yii2-swagger)
+[![Build Status](https://travis-ci.org/tanur/yii2-swagger.svg?branch=master)](https://travis-ci.org/tanur/yii2-swagger)
 
 Installation
 ------------
@@ -62,11 +62,11 @@ class SiteController extends Controller
     {
         return [
             'docs' => [
-                'class' => 'yii2mod\swagger\SwaggerUIRenderer',
+                'class' => 'tanur\swagger\SwaggerUIRenderer',
                 'restUrl' => Url::to(['site/json-schema']),
             ],
             'json-schema' => [
-                'class' => 'yii2mod\swagger\OpenAPIRenderer',
+                'class' => 'tanur\swagger\OpenAPIRenderer',
                 // Тhe list of directories that contains the swagger annotations.
                 'scanDir' => [
                     Yii::getAlias('@app/controllers'),
@@ -181,5 +181,5 @@ http://localhost/path/to/index.php?r=site/docs
 
 ## Support us
 
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/yii2mod). 
+Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/tanur). 
 All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.

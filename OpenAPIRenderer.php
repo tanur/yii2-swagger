@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace tanur\swagger;
 
 use Swagger\Annotations\Swagger;
 use Yii;
@@ -12,7 +12,7 @@ use yii\web\Response;
 /**
  * Class OpenAPIRenderer is responsible for generating the JSON spec.
  *
- * @package yii2mod\swagger\actions
+ * @package tanur\swagger\actions
  */
 class OpenAPIRenderer extends Action
 {
