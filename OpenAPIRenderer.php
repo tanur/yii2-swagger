@@ -2,7 +2,7 @@
 
 namespace tanur\swagger;
 
-use Swagger\Annotations\Swagger;
+use OpenApi\Annotations\Swagger;
 use Yii;
 use yii\base\Action;
 use yii\caching\Cache;
@@ -73,16 +73,16 @@ class OpenAPIRenderer extends Action
     /**
      * Scan the filesystem for swagger annotations and build swagger-documentation.
      *
-     * @return Swagger
+     * @return OpenApi\Annotations\OpenApi
      */
-    protected function getSwaggerDocumentation(): Swagger
+    protected function getSwaggerDocumentation(): \OpenApi\Annotations\OpenApi
     {
         if (!$this->cache instanceof Cache) {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return (new \OpenApi\Generator())->generate($this->scanDir);
         }
 
         return $this->cache->getOrSet($this->cacheKey, function () {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return (new \OpenApi\Generator())->generate($this->scanDir);
         }, $this->cacheDuration);
     }
 
